@@ -11,15 +11,13 @@ export function AboutNewsletterBanner() {
     if (!email.trim()) return;
     setStatus("loading");
     try {
-      const formData = new URLSearchParams();
-      formData.set("form-name", "newsletter");
-      formData.set("email", email);
-      const res = await fetch("/", {
+      const res = await fetch("https://formspree.io/f/xaqdkdzw", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: formData.toString(),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({ email: email.trim() }),
       });
-      if (!res.ok) throw new Error("Submit failed");
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.error || data.message || "Submit failed");
       setStatus("success");
       setEmail("");
     } catch {
@@ -67,20 +65,7 @@ export function AboutNewsletterBanner() {
             <p className="mt-2 text-[var(--darker-bg)]/80">
               Get notified when we launch new apps or add major features.
             </p>
-            <form
-              name="newsletter"
-              method="post"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
-              onSubmit={handleSubmit}
-              className="mt-6 flex flex-col gap-3 sm:flex-row"
-            >
-              <input type="hidden" name="form-name" value="newsletter" />
-              <p className="hidden">
-                <label>
-                  Don&apos;t fill this out: <input name="bot-field" />
-                </label>
-              </p>
+            <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3 sm:flex-row">
               <input
                 type="email"
                 value={email}

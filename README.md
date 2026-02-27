@@ -47,3 +47,4 @@ Edit `src/lib/apps.ts` and add a new entry to the `APPS` array. The grid layout 
 ## Environment Variables
 
 - `NEXT_PUBLIC_GA_ID` — Google Analytics 4 measurement ID (optional). When set, analytics tracking is enabled.
+- `FORMSPREE_ENDPOINT` — **Required for newsletter**. Create a free form at [formspree.io](https://formspree.io), add an `email` field, then set this to your form endpoint (e.g. `https://formspree.io/f/xxxxxxxx`).
