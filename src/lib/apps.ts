@@ -19,7 +19,7 @@ export const APPS: AppConfig[] = [
     icon: "/icons/careers.png",
     description:
       "Your path to your dream job. Tell us where you are and where you want to be — we'll build you a step-by-step career roadmap with qualifications, grades, costs, and deadlines.",
-    features: ["Personalised to your year group & grades", "Real UK & Wales requirements", "AI-powered research"],
+    features: ["Students & professionals — dream job, promotion, career change, step up or step back*", "Real UK & Wales requirements", "AI-powered research"],
     webUrl: "https://athrocareers.co.uk",
     isCenterpiece: false,
   },
@@ -40,8 +40,8 @@ export const APPS: AppConfig[] = [
     letter: "G",
     icon: "/icons/goals.png",
     description:
-      "Your path to any goal. Mortgage, quit smoking, run a marathon — tell us your goal and when you want it. We'll build you a step-by-step pathway with real dates and costs.",
-    features: ["Definite dates, not vague timelines", "Real data from gov.uk & trusted sources", "No hallucination — verified information only"],
+      "Your path to any goal. Save for a house, run a marathon, get a pet — tell us your goal and when you want it. We'll build you a step-by-step pathway with real dates and costs.",
+    features: ["Definite dates, not vague timelines", "Real data from trusted sources**", "No hallucination — verified information only"],
     webUrl: "https://athrogoals.co.uk",
     isCenterpiece: false,
   },

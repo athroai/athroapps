@@ -44,7 +44,7 @@ export function AppCard({ app }: AppCardProps) {
           <h2 className="font-display text-2xl font-bold text-[var(--gold)] md:text-3xl">
             {app.name}
           </h2>
-          <p className="mt-1 text-sm text-[var(--muted)] line-clamp-2">
+          <p className="mt-1 text-sm text-[var(--muted)]">
             {app.description}
           </p>
         </div>

@@ -1,7 +1,6 @@
 import { APPS } from "@/lib/apps";
 import { AppCard } from "@/components/AppCard";
-import { AboutSection } from "@/components/AboutSection";
-import { NewsletterSignup } from "@/components/NewsletterSignup";
+import { AboutNewsletterBanner } from "@/components/AboutNewsletterBanner";
 import { Footer } from "@/components/Footer";
 
 export default function HomePage() {
@@ -41,13 +40,7 @@ export default function HomePage() {
             href="#about"
             className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--gold)]"
           >
-            About
-          </a>
-          <a
-            href="#newsletter"
-            className="text-sm font-medium text-[var(--muted)] transition hover:text-[var(--gold)]"
-          >
-            Newsletter
+            About & Newsletter
           </a>
         </nav>
       </header>
@@ -77,8 +70,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <AboutSection />
-        <NewsletterSignup />
+        <AboutNewsletterBanner />
       </main>
 
       <Footer />
