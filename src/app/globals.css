@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #e4c97e;
+  --bright-green: #4fc38a;
+  --dark-green: #3da970;
+  --dark-bg: #1c2a1e;
+  --darker-bg: #0a1612;
+  --card-bg: rgba(28, 42, 30, 0.8);
+  --light: #ffffff;
+  --muted: #b5cbb2;
+  --display-font: "Playfair Display", serif;
+  --body-font: "Inter", sans-serif;
+  --alt-font: "Raleway", sans-serif;
+  --background: var(--dark-bg);
+  --foreground: var(--light);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--dark-bg);
+  color: var(--light);
+  font-family: var(--body-font);
+}
+
+.font-display {
+  font-family: var(--display-font), serif;
+}
+
+.gradient-text-hero {
+  background: linear-gradient(135deg, var(--gold), var(--bright-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.btn-cta {
+  background: linear-gradient(135deg, var(--gold), var(--bright-green));
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 10px 40px rgba(228, 201, 126, 0.6);
+  transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 50px rgba(228, 201, 126, 0.8);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--gold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 2px solid var(--gold);
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: rgba(228, 201, 126, 0.15);
+  box-shadow: 0 0 30px rgba(228, 201, 126, 0.5);
+}
